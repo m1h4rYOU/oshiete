@@ -24,15 +24,15 @@ body{
 
 .box input[type = "text"],.box input[type = "password"]{
   border: 0;
-  background: none;
+  background: #e4c6a6;
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid #e4c6a6;
+  border: 2px solid #e6cd8c;
   padding: 14px 10px;
   width: 200px;
   outline: none;
-  color: white;
+  color: #8e775d;
   border-radius: 24px;
   transition: 0.25s;
 }
