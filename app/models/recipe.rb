@@ -10,7 +10,7 @@ class Recipe < ApplicationRecord
       validates :detail
     end
 
-  # 各選択が「---」の時は保存できないようにする
+  # ジャンルの選択が「--」の時は保存できないようにする
   validates :genre_id, numericality: { other_than: 1 }
 
   belongs_to :user
