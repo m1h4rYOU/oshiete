@@ -66,7 +66,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
-    bootstrap (5.0.0.alpha1)
+    bootstrap (4.5.2)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
@@ -279,7 +279,7 @@ PLATFORMS
 DEPENDENCIES
   active_hash
   bootsnap (>= 1.4.2)
-  bootstrap (~> 5.0.0.alpha1)
+  bootstrap (~> 4.5.0)
   byebug
   capybara (>= 2.15)
   devise

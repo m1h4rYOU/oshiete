@@ -63,7 +63,7 @@ end
 
 gem 'devise'
 
-gem 'bootstrap', '~> 5.0.0.alpha1'
+gem 'bootstrap', '~> 4.5.0'
 
 gem 'jquery-rails'
 
