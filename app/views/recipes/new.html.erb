@@ -1,0 +1,75 @@
+<div class="recipes-create-contents">
+
+  <header class="recipes-create-header">
+    <%= link_to image_tag('/assets/logo-y.png' , size: '270x28'), "/" %>
+  </header>
+
+  <div class="recipes-create-main">
+    <h2 class="recipes-create-title">レシピを作成する</h2>
+
+    <%= form_with model: @recipe, url: recipes_path, id: 'new_recipe', local: true do |f| %>
+      
+      <%# 料理画像 %>
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          料理画像
+          <span class="indispensable">必須</span>
+        </div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"recipe-image" %>
+        </div>
+        <%= image_tag @recipe.image.variant(resize:'400x400'), class: 'recipe-image' if @recipe.image.attached? %>
+      </div>
+      <%# /料理画像 %>
+
+      <%# 料理名と材料、作り方 %>
+      <div class="new-recipes">
+
+        <div class="weight-bold-text">レシピ名
+          <span class="indispensable">必須</span>
+        </div>
+
+        <%= f.text_area :recipe_name, class:"recipes-text", id:"recipe-name", placeholder:"レシピ名（必須 40文字まで)", maxlength:"40" %>
+
+        <%# ジャンル %>
+        <div class="recipes-genre">
+          <div class="weight-bold-text">
+            ジャンル
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"recipe-genre"}) %>
+        </div>
+        <%# /ジャンル %>
+
+        <div class="recipes-explain">
+
+          <div class="weight-bold-text">材料
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_area :ingredient, class:"ingredients-text", id:"ingredient", placeholder:"材料（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+
+          <div class="weight-bold-text">作り方
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_area :recipe_detail, class:"recipe-detail", id:"ingredient", placeholder:"作り方（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+
+        </div>
+
+      </div>
+      <%# /料理名と材料、作り方 %>
+
+      <%# 下部ボタン %>
+      <div class="post-btn-contents">
+        <%= f.submit "投稿する", class:"post-btn" %>
+        <%= link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+      <%# /下部ボタン %>
+
+    <% end %>
+  </div>
+
+
+</div>
