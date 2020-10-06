@@ -16,31 +16,31 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.all.order('created_at DESC')
   end
 
-  def destroy
-    @recipe.destroy
-    if @recipe.destroy
-      redirect_to root_path
-    else
-      render :edit
-    end
-  end
+  # def destroy
+  #   @recipe.destroy
+  #   if @recipe.destroy
+  #     redirect_to root_path
+  #   else
+  #     render :edit
+  #   end
+  # end
 
-  def edit
-  end
+  # def edit
+  # end
 
-  def show
-  end
+  # def show
+  # end
 
-  def update
-    if @recipe.update(recipe_params)
-      redirect_to recipe_path(@recipe)
-    else
-      render :edit
-    end
-  end
+  # def update
+  #   if @recipe.update(recipe_params)
+  #     redirect_to recipe_path(@recipe)
+  #   else
+  #     render :edit
+  #   end
+  # end
 
   private
 
