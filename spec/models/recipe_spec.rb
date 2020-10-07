@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe Recipe, type: :model do
   describe '#create' do
     before do
-      @recipe = FactoryBot.build(:item)
+      @recipe = FactoryBot.build(:recipe)
       @recipe.image = fixture_file_upload('/public/images/test_image.png')
     end
 
-    it 'imageが存在すれば商品出品できること' do
+    it 'imageが存在すればレシピ投稿できること' do
       expect(@recipe).to be_valid
     end
 
@@ -20,19 +20,19 @@ RSpec.describe Recipe, type: :model do
     it 'dish_nameが空では登録できないこと' do
       @recipe.dish_name = nil
       @recipe.valid?
-      expect(@recipe.errors.full_messages).to include("Dish_name can't be blank")
+      expect(@recipe.errors.full_messages).to include("Dish name can't be blank")
     end
 
     it 'genre_idが「--」では登録できないこと' do
       @recipe.genre_id = 1
       @recipe.valid?
-      expect(@recipe.errors.full_messages).to include('Genre_id must be other than 1')
+      expect(@recipe.errors.full_messages).to include('Genre must be other than 1')
     end
 
     it 'ingredientが空では登録できないこと' do
       @recipe.detail = nil
       @recipe.valid?
-      expect(@recipe.errors.full_messages).to include("Ingredient can't be blank")
+      expect(@recipe.errors.full_messages).to include("Detail can't be blank")
     end
 
     it 'detailが空では登録できないこと' do
