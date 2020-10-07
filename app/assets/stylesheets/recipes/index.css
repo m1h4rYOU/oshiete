@@ -1,0 +1,119 @@
+/* 画面上部の「料理講師に質問できるレシピアプリ」帯部分 */
+.jumbotron-fluid {
+  position: relative;
+  height: 100vh;
+  min-height: 300px;
+  background: url(/assets/main.png) no-repeat center center;
+  background-size: cover;
+}
+
+.jumbotron-container {
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.site-name {
+  margin-bottom: 20px;
+  font-family: 'いろはマル';
+  font-size: 50px;
+  color: #2e499d;
+}
+
+.lead {
+  font-family: 'MotoyaLMaru';
+  color: #d13209;
+}
+
+/* コンテンツエリア */
+.contents {
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+
+/* 新着レシピ一覧 */
+.content-primary>.title {
+  text-align: center;
+  font-size: 3vh;
+  font-weight: bold;
+  font-family: 'いろはマル';
+  color: #2e499d;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.recipe-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.recipe-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+
+}
+
+.recipe-img-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.recipe-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.recipe-name {
+  font-size: 2.5vh;
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* 目的別に3ジャンル */
+.content-secondary>.title {
+  text-align: center;
+  font-size: 3vh;
+  font-weight: bold;
+  font-family: 'いろはマル';
+  color: #2e499d;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.genre-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.genre-image {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.genre-detail {
+  text-align: center;
+  font-size: 2.5vh;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

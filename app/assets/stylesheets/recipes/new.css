@@ -1,0 +1,153 @@
+.recipes-create-contents {
+  background-color: #2e499d;
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.recipes-create-header {
+  padding: 5vh 0;
+  text-align: center;
+}
+
+.recipes-create-main {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 450px;
+  padding: 10vh 15vw;
+}
+
+.recipes-create-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #63676b;
+  text-align: center;
+}
+
+/* 共通 */
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  color: #63676b;
+  min-width: 170px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.select-box {
+  height: 40px;
+  width: 65%;
+  background-color: #aaa;
+  padding-left: 20px;
+  border-radius: 4px;
+}
+/* /共通 */
+
+/* 料理画像 */
+.img-upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
+}
+
+.click-upload>p {
+  margin-bottom: 15px;
+  color: #63676b;
+}
+/* /料理画像 */
+
+/* 料理名と材料、作り方 */
+.new-recipes {
+  padding: 2vh 0;
+}
+
+.recipes-text {
+  width: 100%;
+  padding: 16px 16px 3px;
+  border-radius: 6px;
+  border: 2px solid #63676b;
+  font-size: 16px;
+  resize: none;
+}
+
+.recipes-explain {
+  margin-top: 5vh;
+}
+
+.ingredients-text {
+  width: 100%;
+  padding: 16px 16px 3px;
+  border-radius: 6px;
+  border: 2px solid #63676b;
+  font-size: 16px;
+  resize: none;
+}
+
+.recipe-detail {
+  width: 100%;
+  padding: 16px 16px 3px;
+  border-radius: 6px;
+  border: 2px solid #63676b;
+  font-size: 16px;
+  resize: none;
+}
+
+/* /料理名と材料、作り方 */
+
+/* ジャンル */
+.recipes-genre {
+  width: 300px;
+  padding: 2vh 0;
+}
+
+.select-box {
+  margin: 2vh 0;
+}
+
+/* /ジャンル */
+
+
+/* 下部ボタン */
+.post-btn-contents {
+  width: 100%;
+  text-align: center;
+}
+
+.post-btn {
+  background: #d13209;
+  border: 1px solid #d13209;
+  border-radius: 20px;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  margin-bottom: 4vh;
+}
+
+.back-btn {
+  background: #aaa;
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  color: #fff;
+  padding: 15px 35%;
+  text-decoration: none;
+}
+/* /下部ボタン */

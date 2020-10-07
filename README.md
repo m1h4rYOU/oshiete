@@ -1,5 +1,5 @@
 ## App Name
-料理講師に質問できるレシピサイト”教えて、先生！”
+料理講師に質問できるレシピサイト”教えて！料理先生”
 
 ## Outlines
 レシピがあっても、レシピ通りにならない  
@@ -14,13 +14,9 @@ https://oshiete.herokuapp.com/
 ID: oshiete  
 PW: 1111  
 
-### Teacher Account for Test
-ID: teacher1@mail.com  
-PW: test111111  
-
 ### User Account for Test
-ID: user1@mail.com  
-PW: test222222 
+ID: user1@email.com  
+PW: test1111  
 
 ## Requirement Definitions
 
@@ -36,38 +32,26 @@ PW: test222222
 ## Tables
 ### users table
 
-| Column     | Type    | Options     |
-| ---------- | ------- | ----------- |
-| u_nickname | string  | null: false |
-| u_email    | string  | null: false |
-| u_password | string  | null: false |
+| Column   | Type    | Options     |
+| -------- | ------- | ----------- |
+| nickname | string  | null: false |
+| email    | string  | null: false |
+| password | string  | null: false |
 
 #### Association
-- has_many :comments
-
-### teachers table
-
-| Column     | Type    | Options     |
-| ---------- | ------- | ----------- |
-| t_nickname | string  | null: false |
-| t_email    | string  | null: false |
-| t_password | string  | null: false |
-
-#### Association
-- has_many :recipes
 - has_many :comments
 
 ### recipes table
 
-| Column    | Type       | Options                        |
-| --------- | ---------- | ------------------------------ |
-| teacher   | references | null: false, foreign_key: true |
-| dish_name | string     | null: false                    |
-| genre_id  | integer    | null: false                    |
-| detail    | text       | null: false                    |
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| user       | references | null: false, foreign_key: true |
+| dish_name  | string     | null: false                    |
+| genre_id   | integer    | null: false                    |
+| ingredient | text       | null: false                    |
+| detail     | text       | null: false                    |
 
 #### Association
-- belongs_to :teachers
 - has_many :comments
 - belongs_to_active_hash :genre
 
@@ -75,14 +59,12 @@ PW: test222222
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
 | user    | references | null: false, foreign_key: true |
-| teacher | references | null: false, foreign_key: true |
 | recipe  | references | null: false, foreign_key: true |
 | title   | string     | null: false                    |
 | detail  | text       | null: false                    |
 
 #### Association
 - belongs_to :users
-- belongs_to :teachers
 - belongs_to :recipes
 
 ## Usage on Your Local

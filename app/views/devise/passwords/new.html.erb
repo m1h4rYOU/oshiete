@@ -1,0 +1,30 @@
+<link href="users.css" rel="stylesheet">
+
+<div class="user-contents">
+
+  <header class="user-header">
+      <%= link_to image_tag('/assets/logo-y.png' , size: '270x28'), "/" %>
+  </header>
+
+  <div class="user-main">
+
+    <h3>パスワードをお忘れですか？</h3>
+
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field">
+        <%= f.label :メールアドレス %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", maxlength:"40" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Send me reset password instructions" %>
+      </div>
+    <% end %>
+    
+  </div>
+
+</div>
+
+<%= render "devise/shared/links" %>
