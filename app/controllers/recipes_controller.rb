@@ -31,8 +31,8 @@ class RecipesController < ApplicationController
   # def edit
   # end
 
-  # def show
-  # end
+  def show
+  end
 
   # def update
   #   if @recipe.update(recipe_params)
@@ -48,9 +48,9 @@ class RecipesController < ApplicationController
     params.require(:recipe).permit(:dish_name, :genre_id, :ingredient, :detail, :image).merge(user_id: current_user.id)
   end
 
-  # def set_item
-  #   @recipe = Recipe.find(params[:id])
-  # end
+  def set_item
+    @recipe = Recipe.find(params[:id])
+  end
 
   # def move_to_new
   #   redirect_to '/users/sign_in' unless user_signed_in?
