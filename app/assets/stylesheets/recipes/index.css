@@ -61,10 +61,13 @@ ul {
   width: 37vh;
   padding: 1vw;
   background-color: #FFF;
+
 }
 
 .recipe-img-content {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .recipe-img {
@@ -77,6 +80,8 @@ ul {
   background-color: #FFF;
   color: black;
   padding: 1vw;
+  display: flex;
+  justify-content: center;
 }
 
 

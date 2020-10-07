@@ -32,7 +32,7 @@
 
           <% if @recipes.present? %>
 
-            <% @recipes.each do |item| %>
+            <% @recipes.each do |recipe| %>
                 
               <li class='list'>
                 <%= link_to recipe_path(recipe.id) do %>
