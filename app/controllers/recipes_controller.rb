@@ -45,12 +45,12 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:dish_name, :genre_id, :detail).merge(user_id: current_user.id)
+    params.require(:recipe).permit(:dish_name, :genre_id, :ingredient, :detail).merge(user_id: current_user.id)
   end
 
-  def set_item
-    @recipe = Recipe.find(params[:id])
-  end
+  # def set_item
+  #   @recipe = Recipe.find(params[:id])
+  # end
 
   # def move_to_new
   #   redirect_to '/users/sign_in' unless user_signed_in?
