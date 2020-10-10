@@ -1,0 +1,104 @@
+.recipe-show {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-box {
+  width: 65vw;
+  /* min-width: 1200px; */
+  padding-top: 13vh;
+  /* padding-bottom: 5vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-box>.name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.recipe-creator {
+  font-size: 20px;
+}
+
+.recipe-box-img {
+  width: 35vw;
+  margin: 20px;
+  object-fit: contain;
+}
+
+.recipe-details {
+  width: 80vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  display: flex;
+  justify-content: center;
+
+}
+
+.detail-table {
+  display: flex;
+  width: 65vw;
+  /* min-width: 1200px; */
+}
+
+.detail-recipe {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}
+
+.comment-btn {
+  text-align: center;
+  background-color: #2e499d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}
+
+.question-btn {
+  margin: 20px;
+}
+
+.recipe-red-btn {
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 20px;
+  padding: 2vh 10vw;
+}
+
+.or-text {
+  font-size: 20px;
+}
+
+.recipe-destroy {
+  background-color: lightgray;
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}
+
+.recipe-explain-box {
+  font-size: 18px;
+  margin: 40px 0px;
+}
