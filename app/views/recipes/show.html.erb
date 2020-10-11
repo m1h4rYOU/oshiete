@@ -1,0 +1,67 @@
+<%= render "shared/header" %>
+
+<div class="recipe-show">
+
+  <div class="recipe-box">
+
+    <h2 class="name">
+      <%= @recipe.dish_name %>
+    </h2>
+
+    <h3 class="recipe-creator">レシピ考案　<%= @recipe.user.nickname %>先生</h3>
+
+  </div>
+
+    <div class='recipe-details'>
+
+      <div class='recipe-img-content'>
+        <%= image_tag @recipe.image.variant(resize_to_fill: [300, 200]) ,class:"recipe-box-img" %>
+      </div>
+
+      <table class="detail-table">
+        <tbody>
+          <tr>
+            <th class="detail-recipe">レシピカテゴリー</th>
+            <td class="detail-value"><%= @recipe.genre.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-recipe">材料</th>
+            <td class="detail-value"><%= @recipe.ingredient %></td>
+          </tr>
+          <tr>
+            <th class="detail-recipe">作り方</th>
+            <td class="detail-value"><%= @recipe.detail %></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  <%# /レシピ詳細 %>
+
+  <div class="question-btn">
+
+    <%# ログインしているユーザとレシピ投稿しているユーザが同一人物である時、レシピの編集と削除を表示%>
+    <% if user_signed_in? && current_user.id == @recipe.user_id %>
+
+      <%= link_to '質問の返答をする', root_path(@recipe.id), class:"comment-btn" %>
+      <%= link_to 'レシピの編集', edit_recipe_path(@recipe.id), class: "recipe-red-btn" %>
+      <%= link_to '削除', recipe_path, method: :delete, class:'recipe-destroy' %>
+
+    <% else %>
+      <% if user_signed_in? %>
+        <%= link_to root_path(@recipe.id), class:"comment-btn" do%>
+          <%= @recipe.user.nickname %>先生へ質問する
+        <% end %>
+      <% else %>
+        <%= link_to user_session_path, class:"comment-btn" do%>
+          <%= @recipe.user.nickname %>先生へ質問する
+        <% end %>
+      <% end %>
+    <% end %>
+
+  </div>
+
+</div>
+
+<%= render "shared/footer" %>
