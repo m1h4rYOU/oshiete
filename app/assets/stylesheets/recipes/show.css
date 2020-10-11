@@ -61,44 +61,35 @@
   font-size: 14px;
 }
 
+.question-btn {
+  width: 50%;
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
 .comment-btn {
   text-align: center;
   background-color: #2e499d;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
   color: #FFF;
-  margin: 20px 0px;
-  padding: 2vh 10vw;
-}
-
-.question-btn {
-  margin: 20px;
+  padding: 2vh 3vw;
 }
 
 .recipe-red-btn {
   text-align: center;
   background-color: #ea352d;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
   color: #FFF;
-  margin: 20px 20px;
-  padding: 2vh 10vw;
-}
-
-.or-text {
-  font-size: 20px;
+  padding: 2vh 3vw;
 }
 
 .recipe-destroy {
   background-color: lightgray;
   text-align: center;
-  font-size: 24px;
+  font-size: 16px;
   color: black;
-  margin: 20px 0px;
-  padding: 2vh 10vw;
-}
-
-.recipe-explain-box {
-  font-size: 18px;
-  margin: 40px 0px;
+  padding: 2vh 3vw;
 }

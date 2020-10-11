@@ -3,7 +3,7 @@
 
     <div class="container-fluid">
 
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <img src="/assets/logo-y.png" width="270" height="28" alt="教えて！料理先生">
       </a>
 
@@ -17,7 +17,7 @@
 
           <% if user_signed_in? %>
             <div class="user_nav grid-6">
-              <span><%= link_to current_user.nickname, "#", class: "user-nickname" %></span>
+              <span><%= link_to current_user.nickname, "/", class: "user-nickname" %></span>
               <span><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></span>
             </div>
           <% else %>
