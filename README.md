@@ -129,7 +129,7 @@ SNSアカウント（Googleアカウン、Facabookアカウント）を利用し
 ### Ruby version
 ruby 2.6.5  
 ### Please Execute Following Commands
-% git clone https://git.heroku.com/oshiete-cooking-teacher.git
+% git clone https://git.heroku.com/oshiete-cooking-teacher.git  
 % cd oshiete  
 % bundle install  
 % yarn install  
