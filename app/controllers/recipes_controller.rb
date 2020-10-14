@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_item, only: [:edit, :show, :update, :destroy]
-  # before_action :move_to_new, only: [:new]
+  before_action :move_to_new, only: [:new]
 
   def new
     @recipe = Recipe.new
@@ -28,19 +28,19 @@ class RecipesController < ApplicationController
   #   end
   # end
 
-  # def edit
-  # end
+  def edit
+  end
 
   def show
   end
 
-  # def update
-  #   if @recipe.update(recipe_params)
-  #     redirect_to recipe_path(@recipe)
-  #   else
-  #     render :edit
-  #   end
-  # end
+  def update
+    if @recipe.update(recipe_params)
+      redirect_to recipe_path(@recipe)
+    else
+      render :edit
+    end
+  end
 
   private
 
@@ -52,8 +52,8 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
   end
 
-  # def move_to_new
-  #   redirect_to '/users/sign_in' unless user_signed_in?
-  # end
+  def move_to_new
+    redirect_to '/users/sign_in' unless user_signed_in?
+  end
 
 end
