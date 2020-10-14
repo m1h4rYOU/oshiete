@@ -7,26 +7,84 @@
 レシピ考案している料理講師に直接質問ができるレシピサイトです。  
 
 ## App URL
-https://oshiete.herokuapp.com/
+https://oshiete-cooking-teacher.herokuapp.com/
 
 ## Accounts for Tests
 ### Basic Authentication
 ID: oshiete  
 PW: 1111  
 
-### User Account for Test
+### User Account for Test1
+Nick Name: おにぎり  
 ID: user1@email.com  
 PW: test1111  
 
+### User Account for Test2
+Nick Name: 焼きそば  
+ID: user2@email.com  
+PW: test2222  
+
 ## Requirement Definitions
 
-### ○○機能
-#### :pushpin:Function
-
+### ユーザー管理機能
 #### :pencil2:Purpose
-
+ユーザー登録を可能にする  
 #### :books:Story
-- 
+- 新規ユーザー登録
+-------
+### レシピ詳細表示機能
+#### :pencil2:Purpose
+レシピの詳細を表示可能にする  
+#### :books:Story
+- トップ画面の“新着レシピ”レシピ詳細画面より、内容に変更、修正ができる  
+-------
+### レシピ作成機能
+#### :pencil2:Purpose
+レシピを作成可能にする  
+#### :books:Story
+- レシピを新規作成することができる（講師アカウントと一般ユーザーアカウントで区別予定）
+-------
+### レシピ編集機能
+#### :pencil2:Purpose
+レシピを編集可能にする  
+#### :books:Story
+- レシピ詳細画面より、内容に変更、修正ができる  
+-------
+### レシピ削除機能
+#### :pencil2:Purpose
+レシピを削除可能にする  
+#### :books:Story
+- レシピ詳細画面より、レシピを削除できる  
+-------
+
+## Progressing functions
+
+### レシピ内容質問機能
+#### :pencil2:Purpose
+料理講師と質問があるユーザーがレシピ毎に質問することが可能  
+#### :books:Story
+- 料理講師と質問があるユーザーがレシピ毎に質問ができる  
+-------
+### SNS認証
+#### :pencil2:Purpose
+SNSアカウント（Googleアカウン、Facabookアカウント）を利用したログイン方法を選択肢として追加し、ユーザーアカウント登録方法の選択肢を増やす  
+#### :books:Story
+- ユーザーアカウントの登録方法を「手打ち入力」「Googleアカウントを利用」「Facabookアカウントを利用」の3つから選べるようにする
+- SNSアカウントを選択した場合、既にパスワードは入力されてる状態で表示される
+-------
+### レシピ一覧機能
+#### :pencil2:Purpose
+カテゴリー毎のレシピ一覧を閲覧可能  
+#### :books:Story
+- 本アプリでは、カテゴリー毎にレシピが分類されている為  
+-------
+### 検索機能
+#### :pencil2:Purpose
+ユーザーが簡単にレシピ検索出来るようにする  
+#### :books:Story
+- レシピは数点掲載されていることが前提  
+- レシピ名/カテゴリー/材料などの検索条件を指定する欄を儲ける  
+- 条件に該当するレシピの検索結果のページで表示する  
 -------
 
 ## Tables
@@ -71,7 +129,7 @@ PW: test1111
 ### Ruby version
 ruby 2.6.5  
 ### Please Execute Following Commands
-% git clone https://github.com/we-b/oshiete.git  
+% git clone https://git.heroku.com/oshiete-cooking-teacher.git
 % cd oshiete  
 % bundle install  
 % yarn install  
