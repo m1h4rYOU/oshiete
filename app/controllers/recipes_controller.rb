@@ -19,14 +19,14 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all.order('created_at DESC')
   end
 
-  # def destroy
-  #   @recipe.destroy
-  #   if @recipe.destroy
-  #     redirect_to root_path
-  #   else
-  #     render :edit
-  #   end
-  # end
+  def destroy
+    @recipe.destroy
+    if @recipe.destroy
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
 
   def edit
   end
