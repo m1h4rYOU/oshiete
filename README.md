@@ -113,7 +113,7 @@ SNSアカウント（Googleアカウン、Facabookアカウント）を利用し
 - has_many :comments
 - belongs_to_active_hash :genre
 
-### comments table
+### questions table
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
 | user    | references | null: false, foreign_key: true |
