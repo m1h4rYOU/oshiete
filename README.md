@@ -14,15 +14,24 @@ https://oshiete-cooking-teacher.herokuapp.com/
 ID: oshiete  
 PW: 1111  
 
-### User Account for Test1
-Nick Name: おにぎり  
+### Teacher Account for Test
+Nick Name: おにぎり:rice_ball:  
 ID: user1@email.com  
 PW: test1111  
 
-### User Account for Test2
+### User Account for Test
 Nick Name: 焼きそば  
 ID: user2@email.com  
 PW: test2222  
+
+## :sparkles:Features
+講師ユーザーと一般ユーザーとで、レシピ作成ボタン表示が変更されます。  
+
+【講師ユーザーログイン時】  
+<img width="500" alt="onigiri_login" src="https://user-images.githubusercontent.com/69192993/96444225-df67d000-1248-11eb-85b9-b055d1863a25.png">
+-------
+【一般ユーザーログイン時】  
+<img width="500" alt="yakisoba_login" src="https://user-images.githubusercontent.com/69192993/96444315-06260680-1249-11eb-91f4-68b89092c090.png">
 
 ## Requirement Definitions
 
@@ -56,15 +65,15 @@ PW: test2222
 #### :books:Story
 - レシピ詳細画面より、レシピを削除できる  
 -------
-
-## Progressing functions
-
 ### レシピ内容質問機能
 #### :pencil2:Purpose
 料理講師と質問があるユーザーがレシピ毎に質問することが可能  
 #### :books:Story
 - 料理講師と質問があるユーザーがレシピ毎に質問ができる  
 -------
+
+## Progressing functions
+
 ### SNS認証
 #### :pencil2:Purpose
 SNSアカウント（Googleアカウン、Facabookアカウント）を利用したログイン方法を選択肢として追加し、ユーザーアカウント登録方法の選択肢を増やす  
@@ -93,11 +102,13 @@ SNSアカウント（Googleアカウン、Facabookアカウント）を利用し
 | Column   | Type    | Options     |
 | -------- | ------- | ----------- |
 | nickname | string  | null: false |
+| teacher  | integer | null: false |
 | email    | string  | null: false |
 | password | string  | null: false |
 
 #### Association
-- has_many :comments
+- has_many :recipes
+- has_many :questions
 
 ### recipes table
 
@@ -110,7 +121,8 @@ SNSアカウント（Googleアカウン、Facabookアカウント）を利用し
 | detail     | text       | null: false                    |
 
 #### Association
-- has_many :comments
+- belongs_to :user
+- has_many :questions
 - belongs_to_active_hash :genre
 
 ### questions table
@@ -118,11 +130,10 @@ SNSアカウント（Googleアカウン、Facabookアカウント）を利用し
 | ------- | ---------- | ------------------------------ |
 | user    | references | null: false, foreign_key: true |
 | recipe  | references | null: false, foreign_key: true |
-| title   | string     | null: false                    |
-| detail  | text       | null: false                    |
+| text    | text       | null: false                    |
 
 #### Association
-- belongs_to :users
+- belongs_to :user
 - belongs_to :recipes
 
 ## Usage on Your Local
