@@ -27,7 +27,7 @@ PW: test2222
 ## :sparkles:Features
 講師ユーザーと一般ユーザーとで、レシピ作成ボタン表示が変更されます。  
 
-
+-------
 【講師ユーザーログイン時】  
 <img width="500" alt="onigiri_login" src="https://user-images.githubusercontent.com/69192993/96444225-df67d000-1248-11eb-85b9-b055d1863a25.png">
 -------
