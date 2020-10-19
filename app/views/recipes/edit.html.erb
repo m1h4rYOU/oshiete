@@ -7,7 +7,7 @@
   <div class="recipes-create-main">
     <h2 class="recipes-create-title">レシピを編集する</h2>
 
-    <%= form_with model: @recipe, url: recipes_path, id: 'new_recipe', local: true do |f| %>
+    <%= form_with model: @recipe, id: 'new_recipe', local: true do |f| %>
       
       <%# 料理画像 %>
       <div class="img-upload">
@@ -21,7 +21,6 @@
           </p>
           <%= f.file_field :image, id:"recipe-image" %>
         </div>
-        <%# <%= image_tag @recipe.image.variant(resize_to_fill: [300, 200]), class: 'recipe-image' if @recipe.image.attached? %>
       </div>
       <%# /料理画像 %>
 
@@ -63,8 +62,7 @@
 
       <%# 下部ボタン %>
       <div class="post-btn-contents">
-        <%= f.submit "変更する", url:recipe_path(@recipe.id), class:"post-btn", local: true %>
-        <%# <%= f.submit "変更する", class:"post-btn"%>
+        <%= f.submit "変更する", class:"post-btn" %>
         <%= link_to 'もどる', recipe_path(@recipe.id), class:"back-btn" %>
       </div>
       <%# /下部ボタン %>
