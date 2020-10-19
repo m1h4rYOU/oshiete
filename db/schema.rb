@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_19_093005) do
+ActiveRecord::Schema.define(version: 2020_10_19_110000) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -31,15 +31,6 @@ ActiveRecord::Schema.define(version: 2020_10_19_093005) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
-  end
-
-  create_table "question_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "question_id"
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["question_id"], name: "index_question_users_on_question_id"
-    t.index ["user_id"], name: "index_question_users_on_user_id"
   end
 
   create_table "questions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -78,8 +69,6 @@ ActiveRecord::Schema.define(version: 2020_10_19_093005) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "question_users", "questions"
-  add_foreign_key "question_users", "users"
   add_foreign_key "questions", "recipes"
   add_foreign_key "questions", "users"
   add_foreign_key "recipes", "users"
