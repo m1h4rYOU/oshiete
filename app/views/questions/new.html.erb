@@ -1,0 +1,35 @@
+<div class="questions-contents">
+  <link href="/questions/new.css" rel="stylesheet">
+
+  <header class="recipes-create-header">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#2e499d;">
+      <%= link_to image_tag('/assets/logo-y.png' , size: '270x28'), "/" %>
+    </nav>
+  </header>
+
+  <div class="questions-main">
+    <h2 class="questions-title">質問を作成する</h2>
+    <%= form_with model:@question, url:questions_path, id: 'new_question', local: true do |f| %>
+      <div class="row">
+        <div class="col-8">
+          <%= f.text_area :text, class:"questions-text", id:"question", placeholder:"質問内容（必須 1,000文字まで）", size: "48x4", maxlength:"1000" %>
+        </div>
+        <div class="col-4">
+          <%= f.submit "送信", class:"post-btn" %>
+          <%= link_to 'もどる', root_path, class:"back-btn" %>
+        </div>
+
+          <%# <%= f.text_area :text, class:"questions-text", id:"question", placeholder:"質問内容（必須 1,000文字まで）", size: "48x4", maxlength:"1000" %>
+          <%# <%= f.submit "送信", class:"post-btn" %>
+          <%# %= link_to 'もどる', root_path, class:"back-btn" %>
+        
+      </div>
+    <% end %>
+
+    <div id='questions'>
+      <% @questions.reverse_each do |question| %>
+        <p><%= question.text %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
