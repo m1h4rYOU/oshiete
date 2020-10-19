@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :set_item, only: [:edit, :show, :update, :destroy]
+  before_action :set_recipe, only: [:edit, :show, :update, :destroy]
   before_action :move_to_new, only: [:new]
 
   def new
@@ -48,7 +48,7 @@ class RecipesController < ApplicationController
     params.require(:recipe).permit(:dish_name, :genre_id, :ingredient, :detail, :image).merge(user_id: current_user.id)
   end
 
-  def set_item
+  def set_recipe
     @recipe = Recipe.find(params[:id])
   end
 
