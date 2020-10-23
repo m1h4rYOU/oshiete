@@ -46,7 +46,7 @@
     <%# ログインしているユーザとレシピ投稿しているユーザが同一人物である時、レシピの編集と削除を表示%>
     <% if user_signed_in? && current_user.id == @recipe.user_id %>
 
-      <%= link_to '質問の返答をする', new_question_path, class:"comment-btn" %>
+      <%= link_to '質問の返答をする', new_recipe_question_path(@recipe.id), class:"comment-btn" %>
       <%= link_to 'レシピの編集', edit_recipe_path(@recipe.id), class: "recipe-red-btn" %>
       <%= link_to '削除', recipe_path, method: :delete, class:'recipe-destroy' %>
 

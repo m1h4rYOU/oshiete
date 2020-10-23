@@ -9,7 +9,7 @@
 
   <div class="questions-main">
     <h2 class="questions-title">質問を作成する</h2>
-    <%= form_with model:@question, url:questions_path, id: 'new_question', local: true do |f| %>
+    <%= form_with model:@question, url:recipe_questions_path, id: 'new_question', local: true do |f| %>
       <div class="row">
         <div class="col-8">
           <%= f.text_area :text, class:"questions-text", id:"question_text", placeholder:"質問内容（必須 1,000文字まで）", size: "48x4", maxlength:"1000" %>
