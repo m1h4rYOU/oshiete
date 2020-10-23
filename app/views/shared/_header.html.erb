@@ -34,9 +34,14 @@
           <button class="btn btn-outline-success mr-5" type="submit">Search</button>
         </form>
 
-        <% if current_user.teacher %>
-          <a class="btn btn-secondary" href="/recipes/new" role="button">レシピを書く</a>
-        <% end %>
+          <% if user_signed_in? %>
+            <% if current_user.teacher %>
+              <a class="btn btn-secondary" href="/recipes/new" role="button">レシピを書く</a>
+            <% end %>
+          <% end %>
+
+
+
       </div>
 
     </div>
