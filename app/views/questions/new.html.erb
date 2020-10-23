@@ -12,10 +12,10 @@
     <%= form_with model:@question, url:questions_path, id: 'new_question', local: true do |f| %>
       <div class="row">
         <div class="col-8">
-          <%= f.text_area :text, class:"questions-text", id:"question", placeholder:"質問内容（必須 1,000文字まで）", size: "48x4", maxlength:"1000" %>
+          <%= f.text_area :text, class:"questions-text", id:"question_text", placeholder:"質問内容（必須 1,000文字まで）", size: "48x4", maxlength:"1000" %>
         </div>
         <div class="col-4">
-          <%= f.submit "送信", class:"post-btn" %>
+          <%= f.submit "送信", id: "submit", class:"post-btn" %>
           <%= link_to 'もどる', root_path, class:"back-btn" %>
         </div>
 

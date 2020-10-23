@@ -34,7 +34,7 @@
           <button class="btn btn-outline-success mr-5" type="submit">Search</button>
         </form>
 
-        <% if current_user.teacher != nil %>
+        <% if current_user.teacher %>
           <a class="btn btn-secondary" href="/recipes/new" role="button">レシピを書く</a>
         <% end %>
       </div>
