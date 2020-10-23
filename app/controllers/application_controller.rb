@@ -9,6 +9,15 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :teacher])
   end
 
+  def new_guest
+    user = User.find(1)
+    user.update(email: 'guest@example.com',name: 'ゲストユーザー') do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
+    sign_in user
+    redirect_to root_path
+  end
+
   private
 
   def basic_auth
