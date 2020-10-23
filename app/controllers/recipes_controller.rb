@@ -16,11 +16,10 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.all.order('created_at DESC')
+    @recipes = Recipe.all.order(created_at: :desc)
   end
 
   def destroy
-    @recipe.destroy
     if @recipe.destroy
       redirect_to root_path
     else
