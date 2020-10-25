@@ -36,6 +36,10 @@
         <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい", autocomplete: "new-password", maxlength:"40" %>
       </div>
 
+      <div class="guest">
+        <%= link_to 'ゲストログイン（一般ユーザー）', recipes_guest_sign_in_path, method: :post %>
+      </div>
+
       <div class="actions">
         <%= f.submit "新規登録" %>
       </div>

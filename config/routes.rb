@@ -5,9 +5,16 @@ Rails.application.routes.draw do
   }
   root to: 'recipes#index'
   resources :users, only: [:new, :create, :edit, :update]
+<<<<<<< Updated upstream
   resources :recipes
   resources :questions
 
+=======
+  resources :recipes do
+    resources :questions
+  end
+  post '/recipes/guest_sign_in', to: 'recipes#new_guest'
+>>>>>>> Stashed changes
 end
 
 devise_scope :user do
