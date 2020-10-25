@@ -73,13 +73,6 @@ PW: test2222
 
 ## Progressing functions
 
-### SNS認証
-#### :pencil2:Purpose
-SNSアカウント（Googleアカウン、Facabookアカウント）を利用したログイン方法を選択肢として追加し、ユーザーアカウント登録方法の選択肢を増やす  
-#### :books:Story
-- ユーザーアカウントの登録方法を「手打ち入力」「Googleアカウントを利用」「Facabookアカウントを利用」の3つから選べるようにする
-- SNSアカウントを選択した場合、既にパスワードは入力されてる状態で表示される
--------
 ### レシピ一覧機能
 #### :pencil2:Purpose
 カテゴリー毎のレシピ一覧を閲覧可能  
@@ -98,12 +91,12 @@ SNSアカウント（Googleアカウン、Facabookアカウント）を利用し
 ## Tables
 ### users table
 
-| Column   | Type    | Options     |
-| -------- | ------- | ----------- |
-| nickname | string  | null: false |
-| teacher  | integer | null: false |
-| email    | string  | null: false |
-| password | string  | null: false |
+| Column   | Type    | Options                     |
+| -------- | ------- | --------------------------- |
+| nickname | string  | null: false                 |
+| teacher  | boolean | null: false, default: false |
+| email    | string  | null: false                 |
+| password | string  | null: false                 |
 
 #### Association
 - has_many :recipes
