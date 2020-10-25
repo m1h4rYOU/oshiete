@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
 
   def new_guest
     user = User.find_or_create_by!(email: 'guest@email.com') do |user|
-      user.password = SecureRandom.urlsafe_base64
-      user.password_confirmation = SecureRandom.urlsafe_base64
+      user.password = "guest1111"
+      user.password_confirmation = "guest1111"
       user.nickname = "ゲスト"
     end
     sign_in user
