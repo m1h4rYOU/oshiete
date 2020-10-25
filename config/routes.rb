@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :recipes do
     resources :questions
   end
+  post '/recipes/guest_sign_in', to: 'recipes#new_guest'
 end
 
