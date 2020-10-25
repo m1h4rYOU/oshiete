@@ -13,7 +13,9 @@ consumer.subscriptions.create("QuestionChannel", {
     const html = `<p>${data.content.text}</p>`;
     const questions = document.getElementById('questions');
     const newMessage = document.getElementById('question_text');
-    messages.insertAdjacentHTML('afterbegin', html);
+    const submit = document.getElementById('submit');
+    submit.disabled = false;
+    questions.insertAdjacentHTML('afterbegin', html);
     newMessage.value='';
   }
 });
