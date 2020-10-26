@@ -16,12 +16,11 @@
 
   <div class='recipe-details'>
 
-    <div class='recipe-img-content'>
-      <%= image_tag @recipe.image.variant(resize_to_fill: [300, 200]) ,class:"recipe-box-img" %>
+    <div class='recipe-img-content-show'>
+      <%= image_tag @recipe.image.variant(resize_to_fill: [400, 300]) ,class:"recipe-box-img" %>
     </div>
 
     <table class="detail-table">
-      <tbody>
         <tr>
           <th class="detail-recipe">レシピカテゴリー</th>
           <td class="detail-value"><%= @recipe.genre.name %></td>
@@ -34,7 +33,6 @@
           <th class="detail-recipe">作り方</th>
           <td class="detail-value"><%= @recipe.detail %></td>
         </tr>
-      </tbody>
     </table>
 
   </div>
