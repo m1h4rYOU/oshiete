@@ -5,10 +5,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new(text: params[:question][:text],recipe_id: params[:recipe_id], user_id: current_user.id)
-    if @question.save
-      ActionCable.server.broadcast 'question_channel', content: @question
-    end
+    @question = Question.new(text: params[:question][:text], recipe_id: params[:recipe_id], user_id: current_user.id)
+    ActionCable.server.broadcast 'question_channel', content: @question if @question.save
   end
-
 end
