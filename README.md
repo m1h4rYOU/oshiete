@@ -10,17 +10,13 @@
 https://oshiete-cooking-teacher.herokuapp.com/
 
 ## Accounts for Tests
-### Basic Authentication
-ID: oshiete  
-PW: 1111  
-
 ### Teacher Account for Test
 Nick Name: おにぎり:rice_ball:  
 ID: user1@email.com  
 PW: test1111  
 
 ### User Account for Test
-Nick Name: 焼きそば  
+Nick Name: 焼きそば ※ゲストログイン可能です。  
 ID: user2@email.com  
 PW: test2222  
 
