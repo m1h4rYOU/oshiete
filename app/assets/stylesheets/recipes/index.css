@@ -90,6 +90,32 @@ ul {
   justify-content: center;
 }
 
+/* 料理の基礎動画 */
+.content-movie>.title {
+  text-align: center;
+  font-size: 3vh;
+  font-weight: bold;
+  font-family: 'いろはマル';
+  color: #2e499d;
+  margin-top: 10vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.content-movie>.warning {
+  font-family: 'いろはマル';
+  color: #2e499d;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.movies {
+  display: flex;
+  justify-content: center;
+  margin-right: 16px;
+}
 
 /* 目的別に3ジャンル */
 .content-secondary>.title {
