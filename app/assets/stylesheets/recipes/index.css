@@ -113,8 +113,12 @@ ul {
 
 .movies {
   display: flex;
-  justify-content: center;
-  margin-right: 16px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.coming-soon{
+  margin-top: 4vh;
 }
 
 /* 目的別に3ジャンル */
