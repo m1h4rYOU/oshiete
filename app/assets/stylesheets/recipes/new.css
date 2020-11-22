@@ -129,25 +129,39 @@
 .post-btn-contents {
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .post-btn {
   background: #d13209;
   border: 1px solid #d13209;
-  border-radius: 20px;
+  border-radius: 24px;
   color: #fff;
-  width: 100%;
+  width: 70%;
   height: 50px;
   font-size: 16px;
   margin-bottom: 4vh;
 }
+.post-btn:hover {
+	opacity: 0.5;
+}
 
 .back-btn {
-  background: #aaa;
+  
+  background-color: #aaa;
   border: 1px solid #aaa;
-  border-radius: 20px;
-  color: #fff;
-  padding: 15px 35%;
+  text-align: center;
+  font-size: 16px;
+  color:#fff;
+  padding: 2vh 10vw;
+  border-radius: 24px;
   text-decoration: none;
+}
+.back-btn:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  color: #fff;
 }
 /* /下部ボタン */
