@@ -1,3 +1,16 @@
+/* フェードイン */
+.all {
+  animation: fade 5s;
+}
+
+@keyframes fade {
+  0% {opacity: 0;
+  }
+  100% {opacity: 1;
+
+  }
+}
+
 /* 画面上部の「料理講師に質問できるレシピアプリ」帯部分 */
 .jumbotron-fluid {
   position: relative;
