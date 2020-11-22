@@ -1,3 +1,5 @@
+<link href="header.css" rel="stylesheet">
+
 <header class='top-page-header'>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#2e499d;">
 
@@ -24,11 +26,11 @@
             <div class="grid-6">
               <span><%= link_to 'ログイン', user_session_path, method: :create, class: "login" %></span>
               <span><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></span>
-                </div>
+            </div>
           <% end %>
 
           <div class="grid-6">
-            <%= link_to '　ゲストログイン（一般ユーザー）', recipes_guest_sign_in_path, method: :post %>
+            <span><%= link_to '　ゲストログイン（一般ユーザー）', recipes_guest_sign_in_path, method: :post, class: "guest-login" %></span>
           </div>
 
         </ul>
@@ -40,16 +42,11 @@
 
           <% if user_signed_in? %>
             <% if current_user.teacher %>
-              <a class="btn btn-secondary" href="/recipes/new" role="button">レシピを書く</a>
+              <%= link_to 'レシピを書く', new_recipe_path, class:"create-recipe-btn" %>
             <% end %>
           <% end %>
-
-
-
       </div>
-
     </div>
-
   </nav>
 
 </header>

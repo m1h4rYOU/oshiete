@@ -1,0 +1,71 @@
+.user-nickname {
+  text-decoration: none;
+  color: #ffde00;
+}
+
+.user-nickname:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  color: #ffde00;
+}
+
+.logout {
+  text-decoration: none;
+  color: #ffde00;
+}
+
+.logout:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  color: #ffde00;
+}
+
+.login {
+  text-decoration: none;
+  color: #ffde00;
+}
+
+.login:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  color: #ffde00;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #ffde00;
+}
+
+.sign-up:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  color: #ffde00;
+}
+
+.guest-login {
+  text-decoration: none;
+  color: #ffde00;
+}
+
+.guest-login:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  color: #ffde00;
+}
+
+/* ---下部ボタン--- */
+.create-recipe-btn {
+  background-color: #d13209;
+  border: 1px solid #d13209;
+  text-align: center;
+  font-size: 16px;
+  color:#ffde00;
+  padding: 1vh 2vw;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.create-recipe-btn:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  color: #ffde00;
+}
