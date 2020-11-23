@@ -5,7 +5,7 @@ class Recipe < ApplicationRecord
   # 検索の処理
   def self.search(search)
     if search != ""
-      Recipe.where('text LIKE(?)', "%#{search}%")
+      Recipe.where('dish_name LIKE(?)', "%#{search}%")
     else
       Recipe.all
     end
