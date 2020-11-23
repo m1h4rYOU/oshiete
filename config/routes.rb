@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :edit, :update]
   resources :recipes do
     resources :questions
+    collection do
+      get 'search'
+    end
   end
   post '/recipes/guest_sign_in', to: 'recipes#new_guest'
 end

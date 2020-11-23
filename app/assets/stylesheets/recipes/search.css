@@ -1,0 +1,17 @@
+/* ---検索ボタン--- */
+.search-btn {
+  background-color: #d13209;
+  border: 1px solid #ffde00;
+  text-align: center;
+  font-size: 16px;
+  color:#ffde00;
+  padding: 1vh 2vw;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.search-btn:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  color: #ffde00;
+}

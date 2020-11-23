@@ -2,6 +2,15 @@ class Recipe < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :genre
 
+  # 検索の処理
+  def self.search(search)
+    if search != ""
+      Recipe.where('dish_name LIKE(?)', "%#{search}%")
+    else
+      Recipe.all
+    end
+  end
+
   # 空の投稿を保存できないようにする
   with_options presence: true do
     validates :dish_name

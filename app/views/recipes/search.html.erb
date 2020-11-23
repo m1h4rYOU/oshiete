@@ -1,0 +1,21 @@
+<%= render "shared/header" %>
+
+<div class="contents row">
+  <ul><% @recipes.each do |recipe| %>
+    <li class='list'>
+      <%= link_to recipe_path(recipe.id) do %>
+        <div class='recipe-img-content'>
+          <%= image_tag recipe.image.variant(resize_to_fill: [280, 200]) %>
+        </div>
+        <h3 class='recipe-name'>
+          <%= recipe.dish_name %>
+        </h3>
+        <h4 class='recipe-genre'>
+          【ジャンル】<%= recipe.genre.name %>
+        </h4>
+      <% end %>
+    </li>
+  </ul>  
+</div>
+
+<%= render "shared/footer" %>
