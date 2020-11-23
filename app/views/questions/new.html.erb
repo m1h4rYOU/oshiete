@@ -3,7 +3,7 @@
 
   <header class="recipes-create-header">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#2e499d;">
-      <%= link_to image_tag('/assets/logo-y.png' , size: '270x28'), "/" %>
+      <%= link_to image_tag('/assets/logo-y.png' , size: '260x28'), "/" %>
     </nav>
   </header>
 
@@ -15,21 +15,30 @@
           <%= f.text_area :text, class:"questions-text", id:"question_text", placeholder:"質問内容（必須 1,000文字まで）", size: "48x4", maxlength:"1000" %>
         </div>
         <div class="col-4">
-          <%= f.submit "送信", id: "submit", class:"post-btn" %>
-          <%= link_to 'もどる', root_path, class:"back-btn" %>
+          <%= f.submit "送信", id: "submit", class:"question-post-btn" %>
+          <%= link_to 'もどる', root_path, class:"question-back-btn" %>
         </div>
-
-          <%# <%= f.text_area :text, class:"questions-text", id:"question", placeholder:"質問内容（必須 1,000文字まで）", size: "48x4", maxlength:"1000" %>
-          <%# <%= f.submit "送信", class:"post-btn" %>
-          <%# %= link_to 'もどる', root_path, class:"back-btn" %>
-        
       </div>
     <% end %>
 
-    <div id='questions'>
-      <% @questions.reverse_each do |question| %>
-        <p><%= question.text %></p>
-      <% end %>
+    <div class="questions">
+      <%# <div class="question-user-name"> %>
+        <!-- 投稿したユーザー名情報を出力する (開発中)-->
+        <%# <% @questions.reverse_each do |question| %>
+          <%# <p>投稿者: <%= @question.user.nickname %></p>
+        <%# <% end %>
+      <%# </div> %>
+      <div class="question-date">
+        <!-- 投稿した時刻を出力する -->
+        <% @questions.reverse_each do |question| %>
+        <p>投稿日時: <%= question.created_at %></p>
+        <% end %>
+      </div>
+      <div class="question-message">
+        <% @questions.reverse_each do |question| %>
+          <p><%= question.text %></p>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
