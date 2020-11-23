@@ -58,6 +58,13 @@
   justify-content: center;
 }
 
+/* 新着レシピ一覧の隣の皿とカラトリーのロゴ */
+.img-responsive {
+  margin-top: 10px;
+  width: 32px;
+  height: 16px;
+}
+
 .recipe-lists {
   display: flex;
   flex-wrap: wrap;
