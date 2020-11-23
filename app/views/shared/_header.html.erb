@@ -36,8 +36,10 @@
         </ul>
 
         <form class="d-flex">
-          <input class="form-control mr-2" type="search" placeholder="検索" aria-label="Search">
-          <button class="btn btn-outline-success mr-5" type="submit">Search</button>
+          <%= form_with url: search_recipes_path, local: true, method: :get do |form| %>
+            <%= form.text_field :keyword, placeholder: "レシピ名で検索", class: "search-input" %>
+            <%= form.submit "検索", class: "search-btn" %>
+          <% end %>
         </form>
 
           <% if user_signed_in? %>
