@@ -22,12 +22,12 @@
     <% end %>
 
     <div class="questions">
-      <%# <div class="question-user-name"> %>
-        <!-- 投稿したユーザー名情報を出力する (開発中)-->
-        <%# <% @questions.reverse_each do |question| %>
-          <%# <p>投稿者: <%= @question.user.nickname %></p>
-        <%# <% end %>
-      <%# </div> %>
+        <div class="question-user-name">
+          <!-- 投稿したユーザー名情報を出力する (開発中)-->
+          <% @questions.reverse_each do |question| %>
+            <p>投稿者: <%= current_user.nickname %></p>
+          <% end %>
+        </div>
       <div class="question-date">
         <!-- 投稿した時刻を出力する -->
         <% @questions.reverse_each do |question| %>
