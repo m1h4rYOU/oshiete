@@ -23,7 +23,7 @@
 
     <div class="questions">
         <div class="question-user-name">
-          <!-- 投稿したユーザー名情報を出力する (開発中)-->
+          <!-- 投稿したユーザー名情報を出力する -->
           <% @questions.reverse_each do |question| %>
             <p>投稿者: <%= current_user.nickname %></p>
           <% end %>
