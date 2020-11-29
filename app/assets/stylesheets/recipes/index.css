@@ -175,11 +175,11 @@ ul {
 
 /* ---下部ボタン--- */
 .genre-btn {
-  background-color: #aaa;
-  border: 1px solid #aaa;
+  background-color: #2e499d;
+  border: 1px solid #2e499d;
   text-align: center;
   font-size: 16px;
-  color:#fff;
+  color: #ffde00;
   padding: 2vh 3vw;
   border-radius: 24px;
   text-decoration: none;
@@ -187,5 +187,5 @@ ul {
 .genre-btn:hover {
   opacity: 0.5;
   text-decoration: none;
-  color: #fff;
+  color: #ffde00;
 }
