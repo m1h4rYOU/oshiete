@@ -63,6 +63,7 @@
   padding: 1vh 2vw;
   border-radius: 8px;
   text-decoration: none;
+  margin-left: 5px;
 }
 
 .search-btn:hover {
@@ -81,6 +82,7 @@
   padding: 1vh 2vw;
   border-radius: 8px;
   text-decoration: none;
+  margin-left: 5px;
 }
 .create-recipe-btn:hover {
   opacity: 0.5;
